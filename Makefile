@@ -15,7 +15,7 @@ FTP_TARGET_DIR=/
 SSH_HOST=linuxaudio.berlin
 SSH_PORT=22
 SSH_USER=laub
-SSH_TARGET_DIR=linuxaudio.berlin
+SSH_TARGET_DIR=/var/www/linuxaudio.berlin
 
 S3_BUCKET=my_s3_bucket
 
