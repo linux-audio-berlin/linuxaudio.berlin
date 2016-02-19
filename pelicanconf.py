@@ -38,8 +38,14 @@ SOCIAL = (('LAUB Twitter', 'https://twitter.com/LAudioBerlin'),
         ('Linux Audio Twitter', 'https://twitter.com/LinuxAudio'),
         ('LAUB Github', 'https://github.com/linux-audio-berlin/'),)
 
+LOAD_CONTENT_CACHE = False
+MENUITEMS = ()
 DEFAULT_PAGINATION = 10
 
 # Plugins
 PLUGIN_PATHS = ['pelican-plugins/']
 PLUGINS = ['pelican-page-hierarchy']
+
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+SLUGIFY_SOURCE = 'basename'
