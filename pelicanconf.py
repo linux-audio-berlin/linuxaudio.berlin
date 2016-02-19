@@ -2,11 +2,18 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'LAUB'
-SITENAME = 'Linuxaudio.berlin'
-SITEURL = ''
+ARTICLE_PATHS= ['blog']
+ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
+ARTICLE_URL = '{date:%Y}/{slug}.html'
+AUTHOR = 'Linux Audio Users Berlin'
+# Uncomment following line if you want document-relative URLs when developing
+RELATIVE_URLS = True
+SITENAME = 'linuxaudio.berlin'
+SITEURL = 'http://linuxaudio.berlin'
+SITESUBTITLE = "Linux Audio Users Berlin"
 
 PATH = 'content'
+PATH_METADATA = 'pages/(?P<path>.*)\..*' # Make pages top-level (remove /pages/ from each URL)
 
 TIMEZONE = 'Europe/Berlin'
 
@@ -20,16 +27,19 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (('Linux Audio', 'http://linuxaudio.org/'),
+         ('Linux Audio Conference', 'http://lac.linuxaudio.org/'),
+         ('miniLAC', 'http://minilac.linuxaudio.org/'),
+         ('c-base', 'http://c-base.org'),
+         ('Mailing list', 'http://linuxaudio.berlin/mailman/listinfo/discuss'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('LAUB Twitter', 'https://twitter.com/LAudioBerlin'),
+        ('Linux Audio Twitter', 'https://twitter.com/LinuxAudio'),
+        ('LAUB Github', 'https://github.com/linux-audio-berlin/'),)
 
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# Plugins
+PLUGIN_PATHS = ['pelican-plugins/']
+PLUGINS = ['pelican-page-hierarchy']
